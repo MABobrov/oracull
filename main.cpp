@@ -11,10 +11,10 @@ void year(void){scanf("%f", &yr);
 
 	if ((fmod(yr,4.0) == 0)||(fmod(yr,100.0)!= 0) && (fmod(yr,400.0) == 0))
 	{printf("родились в високосный ");}
-	else{printf("родились в НЕ високосный ");}}
+	else{
+printf("родились в НЕ високосный ");}}
 
 void animal_who(void) {
-
 	animal=fmod(yr,12);
 	//printf("ponedelnik= %i",animal);
 	switch(animal) {
@@ -32,14 +32,11 @@ void animal_who(void) {
 		case 0:{printf("год обезьяны");}break;
 		//default:{printf("ERROR");}
 		}
-		}
+}
 
-
-
-int zodiak(void) {
+void zodiak(void) {
 	scanf("%i", &day);
 	scanf("%d", &month);
-
 	if ((day > 31) && (month != 2)) { printf("Ошибка, попробуйте еще раз"); }
 	else
 		switch (month) {
@@ -96,16 +93,9 @@ int zodiak(void) {
 				if (day < 22)printf("вы стрелец, "); else printf("вы козерог, ");
 			}
 				break;
-			case 0: {
-
-			}
-				break;
 			default: {
 				printf("такого месяца нет!");}}}
 
-
-
 int main(void){zodiak();year();animal_who();
-
 return 0;}
 
